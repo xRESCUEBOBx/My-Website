@@ -1,9 +1,0 @@
-body {
-  margin: 0px 0px;
-  display: grid;
-}
-
-.main-grid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
