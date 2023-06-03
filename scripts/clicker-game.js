@@ -1,5 +1,87 @@
 let count = 0;
 let numberDiv = document.querySelector(".number-div");
+
+function clickMe() {
+  if (count >= 1000) {
+    count += 1000;
+  } else if (count >= 100) {
+    count += 100;
+  } else if (count >= 10) {
+    count += 10;
+  } else {
+    count++;
+  }
+
+  numberDiv.innerHTML = count;
+}
+
+let buttonElement = document.querySelector(".js-clicker-button");
+
+function changeClass() {
+  const classUpdates = [
+    {
+      condition: () => buttonElement.innerText === "Click Me!",
+      classToAdd: "clicker-button",
+      classToRemove: "js-clicker-button",
+      text: "Keep going.",
+    },
+    {
+      condition: () => buttonElement.innerText === "Keep going." && count >= 10,
+      classToAdd: "clicker-button-2",
+      classToRemove: "clicker-button",
+      text: "Okay, that's enough.",
+    },
+    {
+      condition: () =>
+        buttonElement.innerText === "Okay, that's enough." && count >= 100,
+      classToAdd: "js-clicker-button-over-100",
+      classToRemove: "clicker-button-2",
+      text: "No seriously, stop.",
+    },
+    {
+      condition: () =>
+        buttonElement.innerText === "No seriously, stop." && count >= 1000,
+      classToAdd: "js-clicker-button-over-1000",
+      classToRemove: "js-clicker-button-over-100",
+      text: "You're going to pop me..",
+    },
+    {
+      condition: () =>
+        buttonElement.innerText === "You're going to pop me.." &&
+        count >= 100000,
+      classToAdd: "js-clicker-button-over-100000",
+      classToRemove: "js-clicker-button-over-1000",
+      text: "",
+    },
+    {
+      condition: () => buttonElement.innerText === "" && count >= 105000,
+      classToAdd: "js-clicker-button",
+      classToRemove: "js-clicker-button-over-100000",
+      text: "Click Me!",
+    },
+  ];
+
+  for (let i = 0; i < classUpdates.length; i++) {
+    const { condition, classToAdd, classToRemove, text } = classUpdates[i];
+    if (condition()) {
+      buttonElement.classList.add(classToAdd);
+      buttonElement.classList.remove(classToRemove);
+      buttonElement.innerText = text;
+      break;
+    }
+  }
+}
+
+document.querySelector(".js-clicker-button").addEventListener("click", () => {
+  clickMe();
+  changeClass();
+});
+
+console.log(buttonElement);
+
+/*
+let count = 0;
+let numberDiv = document.querySelector(".number-div");
 function clickMe() {
   if (count >= 1000) {
     count += 1000;
@@ -54,3 +136,4 @@ document.querySelector(".js-clicker-button").addEventListener("click", () => {
 });
 
 console.log(buttonElement);
+*/
