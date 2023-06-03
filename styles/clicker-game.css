@@ -1,0 +1,62 @@
+.clicker-game {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 5px solid gold;
+  background-color: black;
+}
+
+.clicker-button-2 {
+  width: 200px;
+  height: 100px;
+  background: rgb(255, 225, 0);
+}
+
+.clicker-button {
+  height: 150px;
+  background-color: red;
+  width: 150px;
+  border-radius: 75px;
+}
+
+.js-clicker-button-over-ten {
+  background-color: blueviolet;
+  height: 500px;
+  width: 250px;
+  border-radius: 250px;
+}
+
+.js-clicker-button-over-100 {
+  height: 250px;
+  background-color: rgb(0, 213, 255);
+  width: 250px;
+  border-radius: 75px;
+}
+
+.js-clicker-button-over-1000 {
+  height: 350px;
+  width: 350px;
+  border-radius: 200px;
+  background-color: purple;
+}
+
+.js-clicker-button-over-100000 {
+  height: 10px;
+  width: 10px;
+  border-radius: 3px;
+  color: aliceblue;
+  background-color: black;
+}
+.number-div {
+  position: absolute;
+  bottom: 150px;
+  color: white;
+}
+
+.js-clicker-button {
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+}
