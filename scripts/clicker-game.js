@@ -51,13 +51,7 @@ function changeClass() {
         count >= 100000,
       classToAdd: "js-clicker-button-over-100000",
       classToRemove: "js-clicker-button-over-1000",
-      text: "",
-    },
-    {
-      condition: () => buttonElement.innerText === "" && count >= 105000,
-      classToAdd: "js-clicker-button",
-      classToRemove: "js-clicker-button-over-100000",
-      text: "Click Me!",
+      text: "-_-",
     },
   ];
 
@@ -72,10 +66,28 @@ function changeClass() {
   }
 }
 
-document.querySelector(".js-clicker-button").addEventListener("click", () => {
+function reset() {
+  count = 0;
+  numberDiv.innerHTML = count;
+  buttonElement.classList.remove("clicker-button");
+  buttonElement.classList.remove("clicker-button-2");
+  buttonElement.classList.remove("js-clicker-button-over-100");
+  buttonElement.classList.remove("js-clicker-button-over-1000");
+  buttonElement.classList.remove("js-clicker-button-over-100000");
+  buttonElement.classList.add("js-clicker-button");
+  buttonElement.innerText = "Click Me!";
+}
+
+function handleClick() {
+  if (count >= 100000) {
+    reset(); // resets if 100000 or more
+  }
+
   clickMe();
   changeClass();
-});
+}
+
+buttonElement.addEventListener("click", handleClick);
 
 console.log(buttonElement);
 
