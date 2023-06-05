@@ -3,6 +3,13 @@
   width: auto;
   color: white;
   border: 5px solid gold;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.rock-paper-scissors-header {
 }
 
 .js-result-images {
@@ -15,9 +22,15 @@
   margin-bottom: 25px;
 }
 
-h1 {
-  font-size: bold;
-  display: inline-block;
+.results-div {
+}
+
+.result {
+  font-size: 16px;
+}
+
+.moves {
+  font-size: 16px;
 }
 
 h6 {
@@ -71,13 +84,5 @@ button {
 }
 
 .score {
-  font-size: 16px;
-}
-
-.result {
-  font-size: 16px;
-}
-
-.moves {
   font-size: 16px;
 }
