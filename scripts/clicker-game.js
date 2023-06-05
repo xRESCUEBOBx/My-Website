@@ -1,5 +1,6 @@
 let count = 0;
 let numberDiv = document.querySelector(".number-div");
+let gameDiv = document.querySelector(".clicker-game");
 
 function clickMe() {
   if (count >= 1000) {
@@ -67,7 +68,7 @@ function changeClass() {
 }
 
 function reset() {
-  count = 0;
+  count = "";
   numberDiv.innerHTML = count;
   buttonElement.classList.remove("clicker-button");
   buttonElement.classList.remove("clicker-button-2");
@@ -88,6 +89,12 @@ function handleClick() {
 }
 
 buttonElement.addEventListener("click", handleClick);
+
+gameDiv.addEventListener("keydown", (event) => {
+  if (event.key === "r") {
+    reset();
+  }
+});
 
 console.log(buttonElement);
 

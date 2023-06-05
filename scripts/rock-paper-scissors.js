@@ -6,6 +6,9 @@ let score = JSON.parse(localStorage.getItem("score")) || {
 
 document.querySelector(".js-result").innerHTML = "What are you waiting for!?";
 document.querySelector(".js-moves").innerHTML = "Pick a move!";
+const rockPaperScissorsDiv = document.querySelector(
+  ".rock-paper-scissors-game"
+);
 
 /*
         if (!score) {
@@ -54,7 +57,8 @@ document
   .addEventListener("click", () => {
     resetScore();
   });
-document.body.addEventListener("keydown", (event) => {
+
+rockPaperScissorsDiv.addEventListener("keydown", (event) => {
   if (event.key === "r") {
     playGame("rock");
   } else if (event.key === "p") {
@@ -63,12 +67,12 @@ document.body.addEventListener("keydown", (event) => {
     playGame("scissors");
   }
 });
-
-document.body.addEventListener("keydown", (event) => {
+rockPaperScissorsDiv.addEventListener("keydown", (event) => {
   if (event.key === "d") {
     resetScore();
   }
 });
+
 /*
   When adding a function you cant run another function
   it will result in undefined because it doesnt actually
