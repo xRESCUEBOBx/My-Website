@@ -1,0 +1,28 @@
+.div3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  flex-direction: column;
+}
+
+.div3 img {
+  height: 150px;
+  border: 5px solid gold;
+}
+
+.div3 button {
+  margin: 10px 0;
+  background: linear-gradient(
+    to right,
+    rgb(255, 247, 247),
+    rgb(70, 64, 64),
+    rgb(89, 86, 48),
+    rgb(114, 98, 39),
+    rgb(113, 104, 2),
+    rgb(95, 21, 21),
+    rgb(104, 45, 45)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

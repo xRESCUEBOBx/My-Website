@@ -1,5 +1,5 @@
 //setTimeout
-
+/*
 setTimeout(() => {
   console.log("Waited one second.");
 }, 1000);
@@ -35,3 +35,4 @@ const myPromise = new Promise((resolve, reject) => {
 });
 
 myPromise.then(() => console.log("Success")).catch(() => console.log("Error"));
+*/
