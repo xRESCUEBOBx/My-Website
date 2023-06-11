@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   background-color: black;
+  border: 5px solid gold;
 }
 
 .div4 img {

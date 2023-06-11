@@ -1,130 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Google Fonts Pre Connect -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <!-- Google Fonts Pre Connect -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <!-- Meta Tags -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts Links (Roboto 400, 500 and 700 included) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
 
-  <!-- Fonts Links (Roboto 400, 500 and 700 included) -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <!-- CSS Files Links -->
+    <link rel="stylesheet" href="/styles/general.css" />
+    <link rel="stylesheet" href="/styles/header.css" />
 
-  <!-- CSS Files Links -->
-  <link rel="stylesheet" href="/styles/general.css">
-  <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/rock-paper-scissors.css" />
+    <link rel="stylesheet" href="/styles/clicker-game.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="/styles/div3.css" />
+    <link rel="stylesheet" href="/styles/div4.css" />
 
-  <link rel="stylesheet" href="/styles/rock-paper-scissors.css">
-  <link rel="stylesheet" href="/styles/clicker-game.css">
-  <link rel="stylesheet" href="/styles/footer.css">
-  <link rel="stylesheet" href="/styles/div3.css">
-  <link rel="stylesheet" href="/styles/div4.css">
+    <!-- Title -->
+    <title>MY Website!!! Version 13</title>
+  </head>
 
-  <!-- Title -->
-  <title>MY Website!!! Version 13</title>
-</head>
+  <body>
+    <header class="header-flex-box">
+      <div class="hello">Welcome to my crash site! Take a look around!</div>
 
-<body>
-  <header class="header-flex-box">
-    <div class="hello">
-      Welcome to my crash site!
-      Take a look around!
-    </div>
+      <div class="Git-Hub">
+        Go checkout my GitHub!
+        <a
+          href="https://github.com/xRESCUEBOBx"
+          target="blank_"
+          class="Git-Hub-Link"
+          >GitHub</a
+        >
+      </div>
+    </header>
 
-    <div class="Git-Hub">
-      Go checkout my GitHub!
-      <a href="https://github.com/xRESCUEBOBx" target="blank_" class="Git-Hub-Link">GitHub</a>
-    </div>
+    <main class="main-grid">
+      <div class="rock-paper-scissors-game">
+        <div class="rock-paper-scissors-header">
+          <h1>Rock Paper Scissors</h1>
 
+          <div class="Buttons-Div">
+            <button class="rockButton js-rock-button">
+              <img src="/images/rock-emoji.png" alt="" />
+            </button>
 
-  </header>
+            <button class="paperButton js-paper-button">
+              <img src="/images/paper-emoji.png" alt="" />
+            </button>
 
-  <main class="main-grid">
-    <div class="rock-paper-scissors-game">
-      <div class="rock-paper-scissors-header">
-        <h1>
-          Rock Paper Scissors
-        </h1>
+            <button class="scissorsButton js-scissors-button">
+              <img src="/images/scissors-emoji.png" />
+            </button>
+          </div>
+        </div>
+        <div class="results-div">
+          <p class="js-result result"></p>
+          <p class="js-moves moves"></p>
+        </div>
 
-        <div class="Buttons-Div">
-          <button class="rockButton js-rock-button">
-            <img src="/images/rock-emoji.png" alt="">
+        <div>
+          <p class="js-score score" score></p>
+        </div>
+
+        <div class="reset-auto-play">
+          <button class="reset-score js-reset-score-button">
+            <h6>Reset Score</h6>
+            <img src="./images/paper-emoji.png" class="Reset-Images" />
+            <img src="./images/rock-emoji.png" class="Reset-Images" />
+            <img src="./images/scissors-emoji.png" class="Reset-Images" />
           </button>
-
-          <button class="paperButton js-paper-button">
-            <img src="/images/paper-emoji.png" alt="">
-          </button>
-
-          <button class="scissorsButton js-scissors-button">
-            <img src="/images/scissors-emoji.png">
+          <button
+            class="auto-play-button js-reset-score-button"
+            onclick="autoPlay();"
+          >
+            <h6>Auto Play</h6>
+            <img src="./images/paper-emoji.png" class="Reset-Images" />
+            <img src="./images/rock-emoji.png" class="Reset-Images" />
+            <img src="./images/scissors-emoji.png" class="Reset-Images" />
           </button>
         </div>
       </div>
-      <div class="results-div">
-        <p class="js-result result"></p>
-        <p class="js-moves moves"></p>
+
+      <div class="clicker-game">
+        <button class="clicker-button js-clicker-button">Click Me!</button>
+        <div class="number-div"></div>
       </div>
 
-      <div>
-        <p class="js-score score" score></p>
+      <div class="div3">
+        <img src="/Images/komodo dragon.jpg" class="js-komodo-pic" />
+        <button class="js-change-pic-button">Change Picture</button>
       </div>
 
-      <div class="reset-auto-play">
-        <button class="reset-score js-reset-score-button">
-          <h6>Reset Score</h6>
-          <img src="./images/paper-emoji.png" class="Reset-Images">
-          <img src="./images/rock-emoji.png" class="Reset-Images">
-          <img src="./images/scissors-emoji.png" class="Reset-Images">
-        </button>
-        <button class="auto-play-button js-reset-score-button" onclick="autoPlay();">
-          <h6>Auto Play</h6>
-          <img src="./images/paper-emoji.png" class="Reset-Images">
-          <img src="./images/rock-emoji.png" class="Reset-Images">
-          <img src="./images/scissors-emoji.png" class="Reset-Images">
-        </button>
+      <div class="div4"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-section-1">
+        Thanks for visiting, I hope you enjoyed!
       </div>
-    </div>
-
-
-
-    <div class="clicker-game">
-      <button class="clicker-button js-clicker-button">Click Me!
-      </button>
-      <div class="number-div">
-
+      <div class="footer-section-2">Come back and visit anytime!</div>
+      <div class="footer-section-3">
+        I will continue to add projects as I complete them.
       </div>
+    </footer>
 
-    </div>
-    <div class="div3">
-      <img src="/Images/komodo dragon.jpg" class="js-komodo-pic">
-      <button class="js-change-pic-button">Change Picture</button>
-    </div>
-    <div class="div4">
-
-    </div>
-
-  </main>
-
-  <footer class="footer">
-    <div class="footer-section-1">
-      Thanks for visiting, I hope you enjoyed!
-    </div>
-    <div class="footer-section-2">
-      Come back and visit anytime!
-    </div>
-    <div class="footer-section-3">
-      I will continue to add projects as I complete them.
-    </div>
-
-  </footer>
-
-  <noscript>Your browser don't support JavaScript!</noscript>
-  <script src="/scripts/clicker-game.js"></script>
-  <script src="./scripts/rock-paper-scissors.js"></script>
-  <script src="/scripts/div3.js"></script>
-</body>
-
+    <noscript>Your browser don't support JavaScript!</noscript>
+    <script src="/scripts/clicker-game.js"></script>
+    <script src="./scripts/rock-paper-scissors.js"></script>
+    <script src="/scripts/div3.js"></script>
+  </body>
 </html>
