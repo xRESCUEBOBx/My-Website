@@ -16,14 +16,14 @@
     />
 
     <!-- CSS Files Links -->
-    <link rel="stylesheet" href="/styles/general.css" />
-    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/header.css" />
 
-    <link rel="stylesheet" href="/styles/rock-paper-scissors.css" />
-    <link rel="stylesheet" href="/styles/clicker-game.css" />
-    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="stylesheet" href="styles/rock-paper-scissors.css" />
+    <link rel="stylesheet" href="styles/clicker-game.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
     <link rel="stylesheet" href="/styles/div3.css" />
-    <link rel="stylesheet" href="/styles/div4.css" />
+    <link rel="stylesheet" href="styles/fizzbuzz.css" />
     <link rel="stylesheet" href="/styles/div5.css" />
     <link rel="stylesheet" href="/styles/div6.css" />
 
@@ -99,11 +99,24 @@
       </div>
 
       <div class="div3">
-        <img src="/Images/komodo dragon.jpg" class="js-komodo-pic" />
+        <img src="/images/komodo dragon.jpg" class="js-komodo-pic" />
         <button class="js-change-pic-button">Change Picture</button>
       </div>
 
-      <div class="div4"></div>
+      <div class="fizzbuzz">
+        <div class="fizz-buzz-element-container">
+          <div>
+            <input
+              type="number"
+              class="fizzbuzz-input-js"
+              placeholder="Enter Number"
+            />
+
+            <button class="fizzbuzz-play-button">Play!</button>
+          </div>
+          <p class="display-result-js">Check this out!</p>
+        </div>
+      </div>
       <div class="div5"></div>
       <div class="div6"></div>
     </main>
@@ -119,8 +132,9 @@
     </footer>
 
     <noscript>Your browser don't support JavaScript!</noscript>
-    <script src="/scripts/clicker-game.js"></script>
-    <script src="./scripts/rock-paper-scissors.js"></script>
-    <script src="/scripts/div3.js"></script>
+    <script src="scripts/clicker-game.js"></script>
+    <script src="scripts/rock-paper-scissors.js"></script>
+    <script src="scripts/div3.js"></script>
+    <script src="scripts/fizzbuzz.js"></script>
   </body>
 </html>

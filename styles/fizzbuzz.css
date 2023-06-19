@@ -1,7 +1,13 @@
-.div4 {
+.fizzbuzz {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: black;
   border: 5px solid gold;
+  color: aliceblue;
+}
+
+.fizz-buzz-element-container {
+  display: grid;
+  text-align: center;
 }
