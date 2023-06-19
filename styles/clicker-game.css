@@ -1,11 +1,12 @@
 .clicker-game {
+  background-image: url(/images/pexels-pixabay-39649.jpg);
+  background-position: center;
+  background-size: cover;
   display: flex;
-  background-color: rgb(255, 255, 255);
   justify-content: center;
   align-items: center;
   position: relative;
   border: 5px solid gold;
-  background-color: black;
 }
 
 .clicker-button-2 {
